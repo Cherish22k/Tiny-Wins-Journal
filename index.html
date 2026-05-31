@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Tiny Wins Journal</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <div class="app">
+
+    <header>
+      <div>
+        <h1>Tiny Wins Journal</h1>
+        <p class="subtitle">One small win at a time</p>
+      </div>
+      <div class="streak-badge">
+        <span id="streak-count">0</span> day streak
+      </div>
+    </header>
+
+    <div class="stats">
+      <div class="stat-card">
+        <p class="stat-label">Total wins</p>
+        <p class="stat-value" id="total-wins">0</p>
+      </div>
+      <div class="stat-card">
+        <p class="stat-label">This month</p>
+        <p class="stat-value" id="month-wins">0</p>
+      </div>
+      <div class="stat-card">
+        <p class="stat-label">Best streak</p>
+        <p class="stat-value" id="best-streak">0</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <p class="section-title">Log today's win</p>
+      <input type="text" id="win-input" placeholder="What did you accomplish today?" />
+      <div class="tags" id="tag-selector">
+        <button class="tag-btn" data-tag="health">Health</button>
+        <button class="tag-btn" data-tag="learning">Learning</button>
+        <button class="tag-btn" data-tag="work">Work</button>
+        <button class="tag-btn" data-tag="social">Social</button>
+        <button class="tag-btn" data-tag="creative">Creative</button>
+      </div>
+      <button id="add-btn">Add win</button>
+    </div>
+
+    <div class="card">
+      <p class="section-title">Activity</p>
+      <div id="heatmap"></div>
+      <div class="legend">
+        <span>Less</span>
+        <div class="legend-cell" style="background:#E1F5EE"></div>
+        <div class="legend-cell" style="background:#9FE1CB"></div>
+        <div class="legend-cell" style="background:#1D9E75"></div>
+        <div class="legend-cell" style="background:#085041"></div>
+        <span>More</span>
+      </div>
+    </div>
+
+    <div>
+      <p class="section-title">Recent wins</p>
+      <div id="entries-list"></div>
+    </div>
+
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
